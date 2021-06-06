@@ -1,62 +1,70 @@
-
-
-
-
-.hero-image{
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+  }
+  
+  .hero-image {
     background-image: url("../images/apple-pie.jpg");
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    background-position: center;
+    width: 100vw; /* viewport-width: 100% da quantidade de pixels disponíveis na tela */
+    height: 75vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.hero-text {
-    text-align: center;
-    width: 100%;
-    color: #f2f2f2;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-
-
-
-.description {
-    font-family: 'Roboto', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50em;
-    
-}
-
-
-.image-recipe-info{
-    width: 30%;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-.sub-title {
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 10em;
-    margin-right: 10em;
-}
-
-.list {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 15em;
-    margin-right: 15em;
-}
-
-body {
-    margin: 0;
-}
-
-
-hr {
-    width: 60em;
-    border: 1px solid;
-}
+  }
+  
+  .hero-image h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: lighter;
+  }
+  
+  .container {
+    margin: 0 75px 0 75px;
+  }
+  
+  .info-img {
+    margin: 0 auto;
+    display: block;
+    width: 45%;
+    height: auto;
+  }
+  
+  .paragraph {
+    font-size: 20px;
+    margin-top: 65px;
+    text-align: justify;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  
+  hr {
+    border-top: solid 2px #989898;
+  }
+  
+  .ingredient-list {
+    list-style: none;
+  }
+  
+  .ingredient-list li::before {
+    content: "- ";
+  }
+  
+  .directions-list {
+    counter-reset: list;
+    list-style: none;
+  }
+  
+  .directions-list li::before {
+    content: counter(list) ") ";
+    counter-increment: list;
+  }
+  
+  li {
+    padding: 3px 0;
+  }
